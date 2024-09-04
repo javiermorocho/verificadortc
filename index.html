@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conciliación de Transacciones</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.upload-section {
+    margin: 10px 0;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.results-section {
+    margin-top: 40px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+thead {
+    background-color: #f2f2f2;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Conciliación de Transacciones y Pagos</h1>
+    <div class="container">
+        <div class="upload-section">
+            <label for="transacciones-file">Subir Archivo de Transacciones:</label>
+            <input type="file" id="transacciones-file" accept=".csv">
+        </div>
+        <div class="upload-section">
+            <label for="pagos-file">Subir Archivo de Pagos:</label>
+            <input type="file" id="pagos-file" accept=".csv">
+        </div>
+        <button onclick="verificarYConciliar()">Conciliar</button>
+    </div>
+    <div class="results-section">
+        <h2>Resultados Conciliados</h2>
+        <table id="results-table">
+            <thead>
+                <tr>
+                    <th>Fecha Transacción</th>
+                    <th>Concepto</th>
+                    <th>Imputación</th>
+                    <th>Descripción</th>
+                    <th>Descripción 2</th>
+                    <th>Cuenta Transacción</th>
+                    <th>Num Cheque</th>
+                    <th>Importe Moneda</th>
+                    <th>Agencia</th>
+                    <th>ID</th>
+                    <th>Fecha Pago</th>
+                    <th>Fecha Venta</th>
+                    <th>Días Recap</th>
+                    <th>Banco</th>
+                    <th>Marca</th>
+                    <th>Referencia</th>
+                    <th>Autorización</th>
+                    <th>Num Tarjeta</th>
+                    <th>Monto</th>
+                    <th>Plazo</th>
+                    <th>Cuenta Pago</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
